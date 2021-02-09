@@ -9,17 +9,9 @@
     "util:check": "npx npm-check-updates",
     "util:commit": "npx git-cz",
     "util:sort": "npx sort-package-json",
-    "util:update": "npx npm-check-updates -u && npm install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.{js,tsx}": "eslint --cache --fix",
-    "./src/**/*.{js,tsx,css,md}": "prettier --write"
+    "util:update": "npx npm-check-updates -u && npm install",
+    "util:husky:lint-staged": "lint-staged",
+    "util:husky:commitlint": "commitlint --edit $1"
   },
   "dependencies": {
     "next": "^10.0.6",
