@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check": "npx npm-check-updates",
+    "commit": "npx git-cz",
+    "commitlint": "commitlint --edit $1",
     "dev": "next dev",
+    "lint-staged": "lint-staged",
+    "sort": "npx sort-package-json",
     "start": "next start",
-    "util:check": "npx npm-check-updates",
-    "util:commit": "npx git-cz",
-    "util:sort": "npx sort-package-json",
-    "util:update": "npx npm-check-updates -u && npm install",
-    "util:husky:lint-staged": "lint-staged",
-    "util:husky:commitlint": "commitlint --edit $1"
+    "update": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
     "next": "^10.0.6",
